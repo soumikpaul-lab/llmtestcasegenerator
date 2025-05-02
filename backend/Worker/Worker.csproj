@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-Worker-ef79fb24-544a-4ca4-922e-29a4d268507c</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.BedrockRuntime" Version="3.7.418" />
+    <PackageReference Include="AWSSDK.Core" Version="3.7.402.39" />
+    <PackageReference Include="AWSSDK.SecurityToken" Version="3.7.401.82" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.3" />
+    <PackageReference Include="MongoDB.Driver" Version="3.3.0" />
+    <PackageReference Include="AWSSDK.Extensions.NETCore.Setup" Version="3.7.400" />
+    <PackageReference Include="AWSSDK.S3" Version="3.7.416.7" />
+    <PackageReference Include="AWSSDK.Textract" Version="3.7.400.131" />
+    <PackageReference Include="polly" Version="8.5.2" />
+  </ItemGroup>
+
+</Project>

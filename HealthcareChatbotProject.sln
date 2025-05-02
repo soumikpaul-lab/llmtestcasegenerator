@@ -1,0 +1,62 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "backend", "backend", "{1AE8ACA6-933B-BF2A-3671-3E2EAC007D16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "backend\Api\Api.csproj", "{A28F0853-CD93-D005-10F9-5F5C999F3E51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{5F3F916C-0321-8A9F-8AC0-501F442D9F72}"
+	ProjectSection(SolutionItems) = preProject
+		docker\mongodb-docker-compose.yml = docker\mongodb-docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Worker", "backend\Worker\Worker.csproj", "{C36EE6CE-2DA2-408F-AB83-78156C3D94EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A28F0853-CD93-D005-10F9-5F5C999F3E51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A28F0853-CD93-D005-10F9-5F5C999F3E51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A28F0853-CD93-D005-10F9-5F5C999F3E51}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A28F0853-CD93-D005-10F9-5F5C999F3E51}.Debug|x64.Build.0 = Debug|Any CPU
+		{A28F0853-CD93-D005-10F9-5F5C999F3E51}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A28F0853-CD93-D005-10F9-5F5C999F3E51}.Debug|x86.Build.0 = Debug|Any CPU
+		{A28F0853-CD93-D005-10F9-5F5C999F3E51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A28F0853-CD93-D005-10F9-5F5C999F3E51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A28F0853-CD93-D005-10F9-5F5C999F3E51}.Release|x64.ActiveCfg = Release|Any CPU
+		{A28F0853-CD93-D005-10F9-5F5C999F3E51}.Release|x64.Build.0 = Release|Any CPU
+		{A28F0853-CD93-D005-10F9-5F5C999F3E51}.Release|x86.ActiveCfg = Release|Any CPU
+		{A28F0853-CD93-D005-10F9-5F5C999F3E51}.Release|x86.Build.0 = Release|Any CPU
+		{C36EE6CE-2DA2-408F-AB83-78156C3D94EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C36EE6CE-2DA2-408F-AB83-78156C3D94EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C36EE6CE-2DA2-408F-AB83-78156C3D94EE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{C36EE6CE-2DA2-408F-AB83-78156C3D94EE}.Debug|x64.Build.0 = Debug|Any CPU
+		{C36EE6CE-2DA2-408F-AB83-78156C3D94EE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C36EE6CE-2DA2-408F-AB83-78156C3D94EE}.Debug|x86.Build.0 = Debug|Any CPU
+		{C36EE6CE-2DA2-408F-AB83-78156C3D94EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C36EE6CE-2DA2-408F-AB83-78156C3D94EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C36EE6CE-2DA2-408F-AB83-78156C3D94EE}.Release|x64.ActiveCfg = Release|Any CPU
+		{C36EE6CE-2DA2-408F-AB83-78156C3D94EE}.Release|x64.Build.0 = Release|Any CPU
+		{C36EE6CE-2DA2-408F-AB83-78156C3D94EE}.Release|x86.ActiveCfg = Release|Any CPU
+		{C36EE6CE-2DA2-408F-AB83-78156C3D94EE}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A28F0853-CD93-D005-10F9-5F5C999F3E51} = {1AE8ACA6-933B-BF2A-3671-3E2EAC007D16}
+		{C36EE6CE-2DA2-408F-AB83-78156C3D94EE} = {1AE8ACA6-933B-BF2A-3671-3E2EAC007D16}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DCE59B0-D206-4542-BC21-E7D82359220F}
+	EndGlobalSection
+EndGlobal
