@@ -7,7 +7,7 @@ public class BenefitDocMetadata
 {
     [BsonId]
     [BsonRepresentation(BsonType.ObjectId)]
-    public string Id { get; set; } = Guid.NewGuid().ToString();
+    public string Id { get; set; } = ObjectId.GenerateNewId().ToString();
     public string DocumentName { get; set; } = string.Empty;
     public DocumentProcessStatus DocumentProcessStatus { get; set; } = DocumentProcessStatus.NotStarted;
     public DateTime UploadDateTime { get; set; } = DateTime.UtcNow;
