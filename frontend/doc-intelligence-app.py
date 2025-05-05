@@ -18,6 +18,7 @@ API_BASE_URL = args.api_base_url.rstrip("/")
 # Backend API endpoints
 API_LIST_URL = f"{API_BASE_URL}/api/benefit/docs"
 API_UPLOAD_URL = f"{API_BASE_URL}/api/benefit/doc/upload"
+MAX_UPLOAD_SIZE = 2 * 1024 * 1024  # 2 MB limit
 
 # Status mapping
 STATUS_MAP = {
@@ -81,18 +82,25 @@ st.markdown(
 
 # File uploader
 uploaded_file = st.file_uploader(
-    "Upload a PDF File",
+    "Upload a benefit document",
     type=["pdf"],
     accept_multiple_files=False,
 )
 if uploaded_file:
-    files = {"file": (uploaded_file.name, uploaded_file.getvalue(), "application/pdf")}
-    with st.spinner("Uploading..."):
-        resp = requests.post(f'{API_UPLOAD_URL}', files=files)
-    if resp.ok:
-        st.success("File uploaded successfully!")
+    # Enforce file size limit before uploading
+    if uploaded_file.size > MAX_UPLOAD_SIZE:
+        size_mb = uploaded_file.size / (1024 * 1024)
+        st.error(f"File too large: {size_mb:.2f} MB. Maximum allowed size is 2 MB.")
     else:
-        st.error("Upload failed. Please try again.")
+        with st.spinner("Uploading file..."):
+            try:
+                files = {"file": (uploaded_file.name, uploaded_file, "application/pdf")}
+                resp = requests.post(API_UPLOAD_URL, files=files)
+                resp.raise_for_status()
+                st.success("File uploaded successfully!")
+                st.experimental_rerun()
+            except Exception as e:
+                st.error(f"Upload failed: {e}")
 
 # Display uploaded documents table
 st.subheader("Uploaded Documents")
