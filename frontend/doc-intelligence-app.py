@@ -67,7 +67,7 @@ st.markdown(
         text-decoration: none;
         transition: transform 0.2s;
     }
-    .action-btn:hover { transform: scale(1.1); }
+    .action-btn:hover { transform: scale(1.5); }
     .testcases { background-color: #4CAF50; }
     .benefits { background-color: #2196F3; }
     </style>
